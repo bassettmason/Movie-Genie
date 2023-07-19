@@ -3,7 +3,7 @@ import Constants from 'expo-constants'
 const getTraktTopTen = async () => {
     const traktInterfaceSecret = Constants.manifest.extra.traktInterfaceSecret;
     try {
-        const requestURL = `https://trakt-interface-server.bassettmason.repl.co/api/playlists?data=topten&token=${traktInterfaceSecret}`;
+        const requestURL = `https://trakt-interface-server.bassettmason.repl.co/api/playlists?data=topten&token=password12345`;
         const response = await fetch(requestURL);
         
         if (!response.ok) {
