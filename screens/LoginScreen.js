@@ -3,14 +3,10 @@ import { Linking, StyleSheet, Text, View, ImageBackground, TouchableOpacity } fr
 import * as traktService from '../services/traktService';
 import * as traktInterface from '../services/traktInterface';
 import * as storage from '../utils/storage'
-import discoveryLists from "../assets/data/discoveryLists.js";
 import { fetchLikedTraktLists } from '../services/fetchLikedTraktLists';
-import { fetchTrendingTraktLists } from '../services/fetchTrendingTraktLists';
-import { fetchPopularTraktLists } from '../services/fetchPopularTraktLists';
 
 import qs from 'qs';
 import { useNavigation } from '@react-navigation/native';
-
 
 const LoginScreen = () => {
   const navigation = useNavigation();
@@ -44,21 +40,18 @@ const handleOpenURL = async (event) => {
 };
 
 
-
 const fetchAndStorePlaylistData = async () => {
     try {
         const topTenMovieData = await traktInterface.getTraktTopTen();
-        // const trendingLists = await fetchTrendingTraktLists();
-        // const popularLists = await fetchPopularTraktLists();
-      
-        // if (trendingLists) {
-        //   storage.storeInIndexedDB('discoveryLists', trendingLists);
-        //   console.log(trendingLists);
-        // }
+
+        // if (discoveryLists) {
+        //  storage.storeInIndexedDB('discoveryLists', discoveryLists);
+        // } else {
+            storage.storeInIndexedDB('discoveryLists', null);
+        //}
         if (topTenMovieData){
           storage.storeInIndexedDB('topTenMovieData', topTenMovieData);
         }
-        
         //storage.cacheMovieImages(topTenMovieData);
     } catch (error) {
         console.error('Error fetching and storing movies', error);

@@ -13,6 +13,7 @@ import {AppContext} from "../navigation/AppNavigator";
 import SubScreenMediaDetails from "../screens/SubscreenMediaDetails.js";
 import Poster, { ITEM_WIDTH } from './Poster'
 import Posters from './Posters';
+import MovieQuote from './MovieQuote';
 
 function NoLists() {
   return (
@@ -20,6 +21,7 @@ function NoLists() {
       <View>
         <Text style={{fontSize: 17}}>No lists were found 🎥</Text>
       </View>
+      <MovieQuote /> 
     </View>
   );
 }
@@ -39,9 +41,9 @@ const MediaList = (mediaData) => {
   let endValue = .01;
   const duration = 500;
 
-  useEffect(() => {
-    setData(mediaData.mediaData);
-  }, []);
+  // useEffect(() => {
+  //   setData(mediaData.mediaData);
+  // }, []);
   
   useEffect(() => {
     fetchAnimatedImg();

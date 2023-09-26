@@ -8,18 +8,16 @@ import MediaList from '../components/MediaList';
 const DiscoverScreen = () => {
   const thisapp = useContext(AppContext);
   const [loading, setLoading] = useState(false);
-  const [movieData, setMovieData] = useState(null);
+  const [discoveryData, setDiscoveryData] = useState(null);
 
   useEffect(() => {
-    // fetchDiscoveryContent();
+    fetchDiscoveryContent();
   }, [thisapp.refresh]);
 
   const fetchDiscoveryContent = async () => {
     try {
         let discoveryLists = await getFromIndexedDB('discoveryLists');
-
-        setMovieData(discoveryLists);
-
+        setDiscoveryData(discoveryLists);
         setLoading(false);
         console.log("Discover Screen Refreshed!")
     } catch (error) {
@@ -38,7 +36,7 @@ const DiscoverScreen = () => {
   } else {
     return (
       <View style={{flex: 1 }}>
-        < MediaList mediaData={movieData}/>
+        < MediaList mediaData={discoveryData}/>
       </View> 
     );
   }

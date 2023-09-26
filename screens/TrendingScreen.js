@@ -9,15 +9,24 @@ const TrendingScreen = ({ navigation }) => {
   const thisapp = useContext(AppContext);
   const [loading, setLoading] = useState(true);
   const [movieData, setMovieData] = useState(null);
-
+  
   useEffect(() => {
     fetchTopTenMovies();
   }, [thisapp.refresh]);
 
-  
     const fetchTopTenMovies = async () => {
       try {
-          const data = await getFromIndexedDB('topTenMovieData');
+          const topTenLists = await getFromIndexedDB('topTenMovieData');
+          const trendingLists = await getFromIndexedDB('trendingLists');
+          const data = [];
+
+          if (topTenLists && Array.isArray(topTenLists)) {
+            data.push(...topTenLists);
+          }
+          if (trendingLists && Array.isArray(trendingLists)) {
+            data.push(...trendingLists);
+          }
+        
           setMovieData(data);
           setLoading(false);
       } catch (error) {
