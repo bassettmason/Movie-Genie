@@ -35,7 +35,7 @@ export default function Posters(props) {
           renderItem={({item, index}) => (
             <Poster 
               {...props} 
-              key={'poster_'+item._ids.trakt+'_'+index} 
+              key={'poster_'+item.ids.trakt+'_'+index} 
               item={item} 
             />
           )}
@@ -44,7 +44,7 @@ export default function Posters(props) {
           onSnapToItem={(index) => setIndex(index)}
           useScrollView={true}
           keyExtractor={(item) => {
-            return 'poster_'+item._ids.trakt
+            return 'poster_'+item.ids.trakt
           }}
         />
       </View>

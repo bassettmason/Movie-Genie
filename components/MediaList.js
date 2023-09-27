@@ -59,10 +59,10 @@ const MediaList = (mediaData) => {
 
     const fetchAnimatedImg = () => {
       if(movie){
-        if(movie._images.moviebackground != null){
-          setAnimatedImg(movie._images.moviebackground);
-        } else if (movie._images.movieposter != null) {
-          setAnimatedImg(movie._images.movieposter);
+        if(movie.art.background != null){
+          setAnimatedImg(movie.art.background);
+        } else if (movie.art.poster != null) {
+          setAnimatedImg(movie.art.poster);
         } else {
           //add splash image
           setAnimatedImg(null);
