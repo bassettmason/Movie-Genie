@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Linking, StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
 import * as traktService from '../services/traktService';
 import * as traktInterface from '../services/traktInterface';
+import * as fireInterface from '../services/fireInterface';
 import * as storage from '../utils/storage'
 import { fetchLikedTraktLists } from '../services/fetchLikedTraktLists';
 
@@ -42,15 +43,18 @@ const handleOpenURL = async (event) => {
 
 const fetchAndStorePlaylistData = async () => {
     try {
-        const topTenMovieData = await traktInterface.getTraktTopTen();
-
+        // const topTenMovieData = await traktInterface.getTraktTopTen();
+        const topTenFireMovieData = await fireInterface.getFireTopTen();
         // if (discoveryLists) {
         //  storage.storeInIndexedDB('discoveryLists', discoveryLists);
         // } else {
             storage.storeInIndexedDB('discoveryLists', null);
         //}
-        if (topTenMovieData){
-          storage.storeInIndexedDB('topTenMovieData', topTenMovieData);
+        // if (topTenMovieData){
+        //   storage.storeInIndexedDB('topTenMovieData', topTenMovieData);
+        // }
+        if (topTenFireMovieData){
+          storage.storeInIndexedDB('topTenMovieData', topTenFireMovieData);
         }
         //storage.cacheMovieImages(topTenMovieData);
     } catch (error) {

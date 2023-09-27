@@ -36,7 +36,7 @@ const fetchDetails = () => {
   if (movie) {
     const newRuntime = movie.runtime ? movie.runtime : null;
     const newGenres = movie.genres ? movie.genres.join(', ') : null;
-    const newThisrating = movie.rating ? Math.trunc(movie.rating * 10) : null;
+    const newThisrating = movie.rating.imdb ? Math.trunc(movie.rating.imdb * 10) : null;
     const newRating = newThisrating ? newThisrating + '%' : null;
     const newHours = newRuntime ? Math.floor(newRuntime / 60) : null;
     const newMinutes = newRuntime ? newRuntime % 60 : null;
@@ -55,12 +55,10 @@ const fetchDetails = () => {
     setYoutubeid(newYoutubeid);
     setYoutubelink(newYoutubelink);
 
-    if (movie._images.movieposter && movie._images.movieposter.url) {
-      setPoster(movie._images.movieposter.url);
-    } else if (movie._images.movieposter) {
-      setPoster(movie._images.movieposter);
-    } else if (movie._images.moviebackground && movie._images.moviebackground.url) {
-      setPoster(movie._images.moviebackground.url);
+    if (movie.art.poster) {
+      setPoster(movie.art.poster);
+    } else if (movie.art.background) {
+      setPoster(movie.art.background);
     } else {
       setPoster(null);
     }

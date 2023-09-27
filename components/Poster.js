@@ -15,10 +15,10 @@ const Poster = (props) => {
 
   const fetchPoster = () => {
 
-      if(item._images.movieposter) {
-        setPoster(item._images.movieposter);
-      } else if(item._images.moviebackground.url) {
-        setPoster(item._images.moviebackground.url);
+      if(item.art.poster) {
+        setPoster(item.art.poster);
+      } else if(item.art.background) {
+        setPoster(item.art.background);
       } else {
         setPoster(null);
       }

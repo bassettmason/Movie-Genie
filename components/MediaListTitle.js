@@ -13,30 +13,13 @@ import Bookmark from "./buttonsAndIcons/Bookmark";
 
 export default function MovieHeader({item, saved}) {
 
-  //Clean up clean up everybody everywhere
-  let finalname;
-  
-  if(item.name.includes('topten')){
-    finalname = item.name.replace(/topten/gi,'');
-  } else {
-    finalname = item.name
-  }
-
-  if(item.name.includes('amazon prime')) {
-    finalname = 'prime video'
-  }
-
-  if(item.name.includes('hbo')) {
-    finalname = 'Max'
-  }
-  
   return (
     <View style={styles.summaryHeader}>
       <Bookmark 
         saved={saved} 
         item={item} 
         />
-        <Text style={styles.summaryTitle}>{finalname}</Text> 
+        <Text style={styles.summaryTitle}>{item.name}</Text> 
     </View>
   );
 }
