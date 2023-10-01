@@ -28,12 +28,12 @@ This video focuses on the frontend, showcasing the user interface, features, and
 
 ### Frontend Description
 The frontend allows the user to log in to a Trakt.tv account, utilizing the Trakt.tv API OAuth to establish the connection.
-  ![Login Screen](assets/images/Login-Screen.PNG)
-  ![Trakt Connect Screen](assets/images/Trakt-Login.PNG)
+<img src="assets/images/Login-Screen.PNG" alt="Login Screen" width="500"/>
+<img src="assets/images/Trakt-Login.PNG" alt="Trakt Connect Screen" width="500"/>
 Once logged in, users can browse automated dynamic playlists and favorite them to add to their Liked playlists on Trakt.
-  ![GUI](assets/images/MovieGeniePic.PNG)
+<img src="assets/images/MovieGeniePic.PNG" alt="GUI" width="500"/>
 If users utilize media library streaming services such as Plex or Syncler, the playlists automatically integrate into their service GUI.
-  ![Syncler With Playlist](assets/images/Syncler-With-Playlist.PNG)
+<img src="assets/images/Syncler-With-Playlist.PNG" alt="Syncler With Playlist" width="500"/>
 
 ### Frontend Technologies
 - **React Native**: A framework for building native apps using React.
@@ -79,42 +79,42 @@ This video focuses on the backend, illustrating the components, data flow, and f
 
 ### Backend Description
 The backend is designed with a multitude of event-based components hosted on GCP, designed to meticulously collect, utilize, and update data.
-  ![GCP Components](assets/images/five_c_functionsGCP.PNG)
+<img src="assets/images/five_c_functionsGCP.PNG" alt="GCP Components" width="500"/>
 For effective data management, Firestore NoSQL DB and the Admin Trakt.tv account are employed, ensuring seamless and organized handling of data.
-  ![FireStore](assets/images/Firestore-Db.PNG)
-  ![Trakt Admin](assets/images/Trakt-Admin.PNG)
+<img src="assets/images/Firestore-Db.PNG" alt="FireStore" width="500"/>
+<img src="assets/images/Trakt-Admin.PNG" alt="Trakt Admin" width="500"/>
 
 
 ### Components
 The backend is structured with several distinct components, each designed to fulfill a specific role, ensuring seamless operation and interaction within the backend to collect and utilize data through various services, APIs, and database systems.
 
 - **flixFireScraper:**
-  ![flixFireScraper Image](assets/images/flix-route-code.PNG)
+<img src="assets/images/flix-route-code.PNG" alt="flixFireScraper Image" width="500"/>
   [flixFireScraper (GitHub Repo)](https://github.com/bassettmason/flix_fire_scraper)
   This component is pivotal for scraping movie data, interacting with various movie databases and services to aggregate essential information about movies, such as titles, genres, ratings, and other pertinent details.
 
 - **TraktInterface-GCP:**
-  ![TraktInterface-GCP Image](assets/images/trakt-interface-gcp-code.PNG)
+<img src="assets/images/trakt-interface-gcp-code.PNG" alt="TraktInterface-GCP Image" width="500"/>
   [TraktInterface-GCP (GitHub Repo)](https://github.com/bassettmason/trakt-interface-gcp)
   Acting as the intermediary between the application and Trakt.tv, this component manages communication, data exchange, and interactions with the Trakt.tv API. It enables the application to retrieve, update, and manage user data and playlists on Trakt.tv efficiently.
 
 - **artGetter:**
-  ![artGetter Image](assets/images/art-getter-code.PNG)
+<img src="assets/images/art-getter-code.PNG" alt="artGetter Image" width="500"/>
   [artGetter (GitHub Repo)](https://github.com/bassettmason/art-grabber)
   The artGetter component specializes in procuring artwork and media related to movies. It retrieves posters, banners, and other visual elements to augment the user interface and enhance user experience by delivering visually compelling and informative content.
 
 - **TrailerGetter:**
-  ![TrailerGetter Image](assets/images/trailer-getter-code-GCP.PNG)
+<img src="assets/images/trailer-getter-code-GCP.PNG" alt="TrailerGetter Image" width="500"/>
   [TrailerGetter (GitHub Repo)](https://github.com/bassettmason/trailer-grabber)
   This component is dedicated to fetching trailers and related video content for movies. It ensures users have access to trailers and previews, aiding them in exploring and discovering movies more comprehensively.
 
 - **Media-Djinn-DB-API:**
-  ![Media-Djinn-DB-API Image](assets/images/Media-djinn-db-api-codeGCP.PNG)
+<img src="assets/images/Media-djinn-db-api-codeGCP.PNG" alt="Media-Djinn-DB-API Image" width="500"/>
   [Media-Djinn-DB-API (GitHub Repo)](https://github.com/bassettmason/media_djinn_db_api)
   This component oversees interactions with the Firestore NoSQL DB, executing CRUD (Create, Read, Update, Delete) operations to ensure the application consistently has access to current and accurate movie data.
 
 - **Google WorkFlows with Scheduler:**
-  ![Google WorkFlows with Scheduler Image](assets/images/scheduler-media-djinn.PNG)
+<img src="assets/images/scheduler-media-djinn.PNG" alt="Google WorkFlows with Scheduler Image" width="500"/>
   This component orchestrates the execution of various tasks and operations within the backend. It leverages Google Scheduler to automate and schedule tasks, ensuring components like flixFireScraper and TraktInterface-GCP operate at specified intervals to maintain data freshness and synchronization.
 
 Each component is integral in sustaining the integrity, accuracy, and responsiveness of the application, collaboratively operating within an event-based architecture to deliver a seamless and enriching user experience.
@@ -187,17 +187,17 @@ Each technology is integral in ensuring the backend is robust, scalable, and eff
 
 ## Connecting It All
 - Utilizing event-based architecture on GCP enables modular functioning of each component and feature. This allows for easy debugging and seamless addition of new features. Instead of a gateway server to interconnect everything, I employ Google Workflows, which are YAML orchestrated scheduled functions.
-  ![Google WorkFlows Code](assets/images/workflow-code.PNG)
+<img src="assets/images/workflow-code.PNG" alt="Google WorkFlows Code" width="500"/>
 - Fortunately, Workflows provide an image layout feature for easy visual representation, allowing a clear overview of how all components are interconnected.
-  ![Google WorkFlows](assets/images/Workflow-zoom-1.PNG)
+<img src="assets/images/Workflow-zoom-1.PNG" alt="Google WorkFlows" width="500"/>
 
   
 ## Journey Of Prototypes
 - The creation of the back-end was a comprehensive learning journey, involving experimentation with and learning about different architectural methods.
 - An online IDE named Repl was used to create the original prototypes. This means many of the commits and progress of this app are not visible on my GitHub.
 - The first prototype utilized a PostgreSQL DB with SQL Alchemy and Flask.
-  ![PostgreSQL](assets/images/old-flix-postgresql-code.PNG)
-  ![SQL Alchemy](assets/images/Old-Flix-Sql-alchemy-code.PNG)
+<img src="assets/images/old-flix-postgresql-code.PNG" alt="PostgreSQL" width="500"/>
+<img src="assets/images/Old-Flix-Sql-alchemy-code.PNG" alt="SQL Alchemy" width="500"/>
 - While developing my CI/CD pipeline, considering costs, and testing speed, I decided to migrate the entire system to a new architecture.
   - Migrated from Flask to FastAPI for a more modern and faster web framework.
   - Switched from PostgreSQL to Firestore for a more flexible and scalable NoSQL cloud database.
