@@ -1,7 +1,7 @@
 # Movie-Genie Prototype
 
 ## Overview
-Movie-Genie Prototype is a full-stack application designed to automate the creation of dynamic playlists, allowing users to browse and favorite them. Once favorited, these playlists are seamlessly added to the users' 'Liked' playlists on Trakt. This integration ensures that media library streaming services like Plex or Syncler can effortlessly display the playlists directly within their service interfaces, enhancing user experience by providing curated content with minimal effort.
+The Movie-Genie Prototype is a full-stack application that is designed to automate the creation of dynamic media playlists, allowing users to browse up-to-date playlists containing trending media from the top OTT streaming services (e.g., Netflix, Prime Video, Max...). These dynamic media playlists can then be favorited which will 1) added the playlist to the user's 'Liked Lists' on Trakt, and 2) display the playlist on OEM devices through services like Plex or Syncler. The overall goal of this application is to enhance the Plex & Syncler user experience, by providing users with curated media playlists (with minimal effort).
 
 [Check out the Prototype! Click Here](https://movie-genie.bassettmason.repl.co/)
 
@@ -27,36 +27,36 @@ Movie-Genie Prototype is a full-stack application designed to automate the creat
 This video focuses on the frontend, showcasing the user interface, features, and interactions.
 
 ### Frontend Description
-The frontend allows the user to log in to a Trakt.tv account, utilizing the Trakt.tv API OAuth to establish the connection.
+A user entering the site for the first time will be prompted to log in with a [Trakt.tv](https://trakt.tv/dashboard) account (utilizing Trakt's OAuth API to establish a secure connection).
 
 <img src="assets/images/Login-Screen.PNG" alt="Login Screen" width="500"/>
 <img src="assets/images/Trakt-Login.PNG" alt="Trakt Connect Screen" width="500"/>
 
-Once logged in, users can browse automated dynamic playlists and favorite them to add to their Liked playlists on Trakt.
+Once logged in, users can browse up-to-date playlists containing media from the top OTT service providers. Users can favorite these playlists by clicking on the Bookmark icon, which will add the playlist to their 'Liked Lists' on Trakt.
 
 <img src="assets/images/MovieGeniePic.PNG" alt="GUI" width="500"/>
 
-If users utilize media library streaming services such as Plex or Syncler, the playlists automatically integrate into their service GUI.
+If users utilize a media library streaming services (e.g., [Plex](https://www.plex.tv/), [Syncler](https://syncler.net/)...), the playlists will automatically integrate into their service's GUI.
 
 <img src="assets/images/Syncler-With-Playlist.PNG" alt="Syncler With Playlist" width="500"/>
 
 ### Frontend Technologies
-- **React Native**: A framework for building native apps using React.
+- **@react-native-async-storage/async-storage**: An asynchronous, unencrypted, persistent, key-value storage system for React Native.
+- **Axios**: Promise-based HTTP client for the browser and Node.js.
+- **BottomTabNavigator**: A component managing the bottom tab navigation in your app.
 - **Expo**: A framework and a platform for universal React applications.
-- **React Navigation**: Routing and navigation for your React Native apps.
+- **Firebase**: Platform developed by Google for creating mobile and web applications.
+- **React Native**: A framework for building native apps using React.
+- **React Native Gesture Handler**: Provides native-driven gesture management APIs for building best possible touch-based experiences.
+- **React Native Pager View**: React Native component that allows us to swipe between different views.
 - **React Native Paper**: Material Design for React Native (Android & iOS).
 - **React Native Reanimated**: A library to build high-performance animations and interactions in React Native.
-- **React Native Gesture Handler**: Provides native-driven gesture management APIs for building best possible touch-based experiences.
-- **React Native WebView**: A modern, well-supported WebView for React Native.
 - **React Native Screens**: Provides native navigation container components.
-- **Axios**: Promise-based HTTP client for the browser and Node.js.
-- **Firebase**: Platform developed by Google for creating mobile and web applications.
-- **Vite**: A build tool that aims to provide a faster and leaner development experience for modern web projects.
-- **React Native Snap Carousel**: Swiper/carousel component for React Native featuring previews, multiple layouts, parallax images, performant handling of huge numbers of items, and more.
 - **React Native Shared Element**: A performant way to make shared element transitions between screens in React Native.
-- **React Native Pager View**: React Native component that allows us to swipe between different views.
-- **BottomTabNavigator**: A component managing the bottom tab navigation in your app.
-- **@react-native-async-storage/async-storage**: An asynchronous, unencrypted, persistent, key-value storage system for React Native.
+- **React Native Snap Carousel**: Swiper/carousel component for React Native featuring previews, multiple layouts, parallax images, performant handling of huge numbers of items, and more.
+- **React Native WebView**: A modern, well-supported WebView for React Native.
+- **React Navigation**: Routing and navigation for your React Native apps.
+- **Vite**: A build tool that aims to provide a faster and leaner development experience for modern web projects.
 
 ### Features
 The frontend is enriched with a variety of features designed to provide users with a diverse and enriching experience. Here are the key features currently implemented and those in the pipeline:
@@ -148,65 +148,65 @@ Each component is integral in sustaining the integrity, accuracy, and responsive
 ### Backend Technologies
 The backend leverages a diverse array of technologies, libraries, and services to facilitate efficient data processing, retrieval, and management. Below are the key technologies employed:
 
-- **FastAPI:**
-  A modern, high-performance web framework for building APIs with Python, based on standard Python type hints.
-
-- **Pydantic:**
-  Utilized for data validation and settings management using Python type annotations.
-
-- **Firestore:**
-  A flexible and scalable NoSQL cloud database designed to store and synchronize data for client- and server-side development.
-
 - **BeautifulSoup:**
   A Python library that excels in extracting data from HTML and XML files, offering Pythonic idioms for iterating, searching, and modifying the parse tree.
-
-- **Requests:**
-  A user-friendly HTTP library for Python.
-
-- **Google Cloud Functions:**
-  A lightweight, event-based, asynchronous compute solution enabling the creation of small, single-purpose functions that respond to cloud events without the necessity to manage a server or runtime environment.
-
-- **Google Scheduler:**
-  A fully managed, enterprise-grade cron job scheduler, enabling the execution of jobs on any schedule.
-
-- **Google Cloud Run:**
-  A fully managed compute platform that automatically scales stateless containers.
-
-- **GitHub Actions:**
-  Facilitates CI/CD and allows the automation of workflows directly within GitHub repositories.
-
-- **Terraform:**
-  An open-source infrastructure as code software tool, providing a consistent CLI workflow to manage a multitude of cloud services.
-
-- **GCP (Google Cloud Platform):**
-  A suite of cloud computing services running on the same infrastructure that Google uses for its end-user products.
 
 - **Docker:**
   A platform designed for developing, shipping, and running applications in containers.
 
+- **Fanart API:**
+  An API specialized in retrieving artwork, images, and other media-related content.
+
+- **FastAPI:**
+  A modern, high-performance web framework for building APIs with Python, based on standard Python type hints.
+
+- **Firestore:**
+  A flexible and scalable NoSQL cloud database designed to store and synchronize data for client- and server-side development.
+
+- **GCP (Google Cloud Platform):**
+  A suite of cloud computing services running on the same infrastructure that Google uses for its end-user products.
+
+- **GitHub Actions:**
+  Facilitates CI/CD and allows the automation of workflows directly within GitHub repositories.
+
+- **Google Cloud Functions:**
+  A lightweight, event-based, asynchronous compute solution enabling the creation of small, single-purpose functions that respond to cloud events without the necessity to manage a server or runtime environment.
+
+- **Google Cloud Run:**
+  A fully managed compute platform that automatically scales stateless containers.
+
+- **Google Scheduler:**
+  A fully managed, enterprise-grade cron job scheduler, enabling the execution of jobs on any schedule.
+
 - **Google Workflows:**
   A fully managed service for orchestrating Google Cloud and HTTP-based APIs, integrating with various Google Cloud services and any publicly available APIs.
-
-- **Pytest:**
-  A testing framework that simplifies the process of writing simple tests and scales to support complex functional testing for applications.
-
-- **Uvicorn:**
-  A lightning-fast ASGI server implementation, utilizing uvloop and httptools.
 
 - **Postman:**
   A collaboration platform for API development, widely used for testing APIs.
 
-- **Fanart API:**
-  An API specialized in retrieving artwork, images, and other media-related content.
+- **Premium Flix Account API:**
+  An API designed to interact with Premium Flix services for accessing premium data.
 
-- **YouTube API:**
-  Facilitates interactions with YouTube services to retrieve video content, details, and other media-related information.
+- **Pydantic:**
+  Utilized for data validation and settings management using Python type annotations.
+
+- **Pytest:**
+  A testing framework that simplifies the process of writing simple tests and scales to support complex functional testing for applications.
+
+- **Requests:**
+  A user-friendly HTTP library for Python.
+
+- **Terraform:**
+  An open-source infrastructure as code software tool, providing a consistent CLI workflow to manage a multitude of cloud services.
 
 - **Trakt.tv API:**
   Offers interfaces to interact with Trakt.tv services to manage and retrieve user data and playlists.
 
-- **Premium Flix Account API:**
-  An API designed to interact with Premium Flix services for accessing premium data.
+- **Uvicorn:**
+  A lightning-fast ASGI server implementation, utilizing uvloop and httptools.
+
+- **YouTube API:**
+  Facilitates interactions with YouTube services to retrieve video content, details, and other media-related information.
 
 Each technology is integral in ensuring the backend is robust, scalable, and efficient, meeting the diverse needs of the application.
 
