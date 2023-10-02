@@ -23,7 +23,7 @@ The Movie-Genie Prototype is a full-stack application that is designed to automa
 
 ## Frontend
 ### Frontend Demo
-[youtube url goes here](#)
+
 This video focuses on the frontend, showcasing the user interface, features, and interactions.
 
 ### Frontend Description
@@ -80,7 +80,6 @@ The frontend is enriched with a variety of features designed to provide users wi
 ## Backend
 ### Backend Demo
 
-[youtube url goes here](#)
 This video focuses on the backend, illustrating the components, data flow, and functionality.
 
 ### Backend Description
