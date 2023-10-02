@@ -13,7 +13,6 @@ The Movie-Genie Prototype is a full-stack application that is designed to automa
   - [Frontend Technologies](#frontend-technologies)
   - [Features](#features)
 - [Backend](#backend)
-  - [Backend Demo](#backend-demo)
   - [Backend Description](#backend-description)
   - [Components](#components)
   - [Backend Technologies](#backend-technologies)
@@ -23,6 +22,7 @@ The Movie-Genie Prototype is a full-stack application that is designed to automa
 
 ## Frontend
 ### Frontend Demo
+[Movie-Genie Demo Vid](https://youtube.com/shorts/-ZeFzzFEYkk?feature=share)
 
 This video focuses on the frontend, showcasing the user interface, features, and interactions.
 
@@ -78,9 +78,6 @@ The frontend is enriched with a variety of features designed to provide users wi
   The application is designed to evolve and adapt, with plans to incorporate AI-driven features that will be able to generate playlists and recommendations from various sources, ensuring that the users have access to content that aligns with their preferences and viewing habits.
 
 ## Backend
-### Backend Demo
-
-This video focuses on the backend, illustrating the components, data flow, and functionality.
 
 ### Backend Description
 The backend is designed with a multitude of event-based components hosted on GCP, designed to meticulously collect, utilize, and update data.
